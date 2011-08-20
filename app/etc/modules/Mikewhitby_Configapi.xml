@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @category    Mikewhitby
+ * @package     Mikewhitby_Configapi
+ * @copyright   Copyright (c) 2011 Mikewhitby (http://www.mikewhitby.info)
+ * @license     http://www.opensource.org/licenses/gpl-3.0.html GNU General Public License, version 3
+ */
+-->
+<config>
+    <modules>
+        <Mikewhitby_Configapi>
+            <active>true</active>
+            <codePool>local</codePool>
+            <depends>
+                <Mage_Core/>
+            </depends>
+        </Mikewhitby_Configapi>
+    </modules>
+</config>

@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @category    Mikewhitby
+ * @package     Mikewhitby_Configapi
+ * @copyright   Copyright (c) 2011 Mikewhitby (http://www.mikewhitby.info)
+ * @license     http://www.opensource.org/licenses/gpl-3.0.html GNU General Public License, version 3
+ */
+-->
+<config>
+    <api>
+        <resources>
+            <config translate="title" module="mikewhitby_configapi">
+                <model>mikewhitby_configapi/api</model>
+                <title>Configuration API</title>
+                <acl>mikewhitby_configapi</acl>
+                <methods>
+                    <currentStore>
+                        <title>Set/Get current store view</title>
+                    </currentStore>
+                    <read translate="title" module="mikewhitby_configapi">
+                        <title>Read configuration value</title>
+                        <acl>mikewhitby_configapi/read</acl>
+                    </read>
+                    <set translate="title" module="mikewhitby_configapi">
+                        <title>Set configuration value</title>
+                        <acl>mikewhitby_configapi/set</acl>
+                    </set>
+                    <delete translate="title" module="mikewhitby_configapi">
+                        <title>Delete configuration value</title>
+                        <acl>mikewhitby_configapi/delete</acl>
+                    </delete>
+                </methods>
+                <faults module="mikewhitby_configapi">
+                    <store_not_exists>
+                        <code>100</code>
+                        <message>Requested store view not found.</message>
+                    </store_not_exists>
+                    <website_not_exists>
+                        <code>101</code>
+                        <message>Requested website not found.</message>
+                    </website_not_exists>
+                    <key_not_exists>
+                        <code>102</code>
+                        <message>Requested config key not found</message>
+                    </key_not_exists>
+                    <data_invalid>
+                        <code>103</code>
+                        <message>Invalid data given. Details in error message.</message>
+                    </data_invalid>
+                </faults>
+            </config>
+        </resources>
+        <acl>
+            <resources>
+                <mikewhitby_configapi translate="title" module="mikewhitby_configapi">
+                    <title>Configuration</title>
+                    <read translate="title" module="mikewhitby_configapi">
+                        <title>Read</title>
+                        <sort_order>5</sort_order>
+                    </read>
+                    <set translate="title" module="mikewhitby_configapi">
+                        <title>Set</title>
+                        <sort_order>10</sort_order>
+                    </set>
+                    <delete translate="title" module="mikewhitby_configapi">
+                        <title>Delete</title>
+                        <sort_order>15</sort_order>
+                    </delete>
+                </mikewhitby_configapi>
+            </resources>
+        </acl>
+    </api>
+</config>

@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @category    Mikewhitby
+ * @package     Mikewhitby_Configapi
+ * @copyright   Copyright (c) 2011 Mikewhitby (http://www.mikewhitby.info)
+ * @license     http://www.opensource.org/licenses/gpl-3.0.html GNU General Public License, version 3
+ */
+-->
+<config>
+    <modules>
+        <Mikewhitby_Configapi>
+            <version>1.0.0</version>
+        </Mikewhitby_Configapi>
+    </modules>
+    <global>
+        <models>
+            <mikewhitby_configapi>
+                <class>Mikewhitby_Configapi_Model</class>
+            </mikewhitby_configapi>
+        </models>
+        <helpers>
+            <mikewhitby_configapi>
+                <class>Mikewhitby_Configapi_Helper</class>
+            </mikewhitby_configapi>
+        </helpers>
+    </global>
+</config>
