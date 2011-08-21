@@ -1,6 +1,6 @@
 # Magento Config API
 
-Take a look at the (Magento Webservices Introduction)[http://www.magentocommerce.com/wiki/doc/webservices-api/introduction] page on the Magento Wiki if you're not sure how to connect and use the Magento API.
+Take a look at the [Magento Webservices Introduction](http://www.magentocommerce.com/wiki/doc/webservices-api/introduction) page on the Magento Wiki if you're not sure how to connect and use the Magento API.
 
 ## Usage
 
