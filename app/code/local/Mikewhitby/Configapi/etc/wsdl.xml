@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:typens="urn:{{var wsdl.name}}" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns="http://schemas.xmlsoap.org/wsdl/" name="{{var wsdl.name}}" targetNamespace="urn:{{var wsdl.name}}">
+    <types>
+        <schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:Magento">
+            <import namespace="http://schemas.xmlsoap.org/soap/encoding/" schemaLocation="http://schemas.xmlsoap.org/soap/encoding/" />
+        </schema>
+    </types>
+    <message name="configReadRequest">
+        <part name="sessionId" type="xsd:string" />
+        <part name="key" type="xsd:string" />
+    </message>
+    <message name="configReadResponse">
+        <part name="result" element="xsd:string"/>
+    </message>
+    <message name="configSetRequest">
+        <part name="sessionId" type="xsd:string" />
+        <part name="key" type="xsd:string" />
+        <part name="value" type="xsd:string" />
+    </message>
+    <message name="configSetResponse">
+        <part name="result" element="xsd:boolean"/>
+    </message>
+    <message name="configDeleteRequest">
+        <part name="sessionId" type="xsd:string" />
+        <part name="key" type="xsd:string" />
+    </message>
+    <message name="configDeleteResponse">
+        <part name="result" element="xsd:boolean"/>
+    </message>
+    <portType name="{{var wsdl.handler}}PortType">
+        <operation name="configRead">
+            <documentation>Read a configuration value</documentation>
+            <input message="configReadRequest"/>
+            <output message="configReadResponse"/>
+        </operation>
+        <operation name="configSet">
+            <documentation>Set a configuration value</documentation>
+            <input message="configSetRequest"/>
+            <output message="configSetResponse"/>
+        </operation>
+        <operation name="configDelete">
+            <documentation>Delete a configuration value</documentation>
+            <input message="configDeleteRequest"/>
+            <output message="configDeleteResponse"/>
+        </operation>
+    </portType>
+    <binding name="{{var wsdl.handler}}Binding" type="typens:{{var wsdl.handler}}PortType">
+        <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http" />
+        <operation name="configRead">
+            <soap:operation soapAction="urn:{{var wsdl.handler}}Action" />
+            <input>
+                <soap:body namespace="urn:{{var wsdl.name}}" use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+            </input>
+            <output>
+                <soap:body namespace="urn:{{var wsdl.name}}" use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+            </output>
+        </operation>
+        <operation name="configSet">
+            <soap:operation soapAction="urn:{{var wsdl.handler}}Action" />
+            <input>
+                <soap:body namespace="urn:{{var wsdl.name}}" use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+            </input>
+            <output>
+                <soap:body namespace="urn:{{var wsdl.name}}" use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+            </output>
+        </operation>
+        <operation name="configDelete">
+            <soap:operation soapAction="urn:{{var wsdl.handler}}Action" />
+            <input>
+                <soap:body namespace="urn:{{var wsdl.name}}" use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+            </input>
+            <output>
+                <soap:body namespace="urn:{{var wsdl.name}}" use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+            </output>
+        </operation>
+    </binding>
+    <service name="{{var wsdl.name}}Service">
+        <port name="{{var wsdl.handler}}Port" binding="typens:{{var wsdl.handler}}Binding">
+            <soap:address location="{{var wsdl.url}}" />
+        </port>
+    </service>
+</definitions>
