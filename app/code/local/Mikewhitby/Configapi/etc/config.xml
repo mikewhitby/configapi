@@ -15,14 +15,14 @@
     </modules>
     <global>
         <models>
-            <mikewhitby_configapi>
+            <configapi>
                 <class>Mikewhitby_Configapi_Model</class>
-            </mikewhitby_configapi>
+            </configapi>
         </models>
         <helpers>
-            <mikewhitby_configapi>
+            <configapi>
                 <class>Mikewhitby_Configapi_Helper</class>
-            </mikewhitby_configapi>
+            </configapi>
         </helpers>
     </global>
 </config>

@@ -11,24 +11,24 @@
     <api>
         <resources>
             <config translate="title" module="mikewhitby_configapi">
-                <model>mikewhitby_configapi/api</model>
+                <model>configapi/api</model>
                 <title>Configuration API</title>
-                <acl>mikewhitby_configapi</acl>
+                <acl>config</acl>
                 <methods>
                     <currentStore>
                         <title>Set/Get current store view</title>
                     </currentStore>
                     <read translate="title" module="mikewhitby_configapi">
                         <title>Read configuration value</title>
-                        <acl>mikewhitby_configapi/read</acl>
+                        <acl>config/read</acl>
                     </read>
                     <set translate="title" module="mikewhitby_configapi">
                         <title>Set configuration value</title>
-                        <acl>mikewhitby_configapi/set</acl>
+                        <acl>config/set</acl>
                     </set>
                     <delete translate="title" module="mikewhitby_configapi">
                         <title>Delete configuration value</title>
-                        <acl>mikewhitby_configapi/delete</acl>
+                        <acl>config/delete</acl>
                     </delete>
                 </methods>
                 <faults module="mikewhitby_configapi">
@@ -53,7 +53,7 @@
         </resources>
         <acl>
             <resources>
-                <mikewhitby_configapi translate="title" module="mikewhitby_configapi">
+                <config translate="title" module="mikewhitby_configapi">
                     <title>Configuration</title>
                     <read translate="title" module="mikewhitby_configapi">
                         <title>Read</title>
@@ -67,7 +67,7 @@
                         <title>Delete</title>
                         <sort_order>15</sort_order>
                     </delete>
-                </mikewhitby_configapi>
+                </config>
             </resources>
         </acl>
     </api>
